@@ -1,0 +1,23 @@
+.footerModal{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.footerModal>button{
+	margin-bottom: 15px;
+}
+
+.footerModal > :not(:last-child) {
+
+    margin-right: 0px;
+
+}
+
+.padre{
+	background-color: #CCCCCC;
+}
+
+.fullWidth{
+	width: 100%;
+}

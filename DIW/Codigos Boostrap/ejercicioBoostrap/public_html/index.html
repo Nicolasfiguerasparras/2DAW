@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Examen Boostrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.navBar{
+    height: 4rem;
+}
+    </style>
+    <body>
+        <!--Menú de la web-->
+        <div class="navBar">
+            <ul>
+                <li><a class="active" href="#inicio">Inicio</a></li>
+                <li><a href="#testarossa">Testarossa</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            <div class="pull-right">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+            </div>
+            </ul>
+	</div>
+        
+        <!--Carousel-->
+  
+        <div class="container-fluid">
+            <div class = "row">
+                <div class= "col-12">
+                    <div id="miPrimerCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#miPrimerCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#miPrimerCarousel" data-slide-to="1"></li>
+                            <li data-target="#miPrimerCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="im1.jpg" alt="Imagen de un faro">
+                                <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 255, 0.5);" >
+                                    <h5>Imagen de un faro</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="im2.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 255, 0.5);" >
+                                    <h5>Imagen de un faro</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="im3.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 255, 0.5);" >
+                                    <h5>Imagen de un faro</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#miPrimerCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#miPrimerCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!--Testarossa-->
+        <div id="testarossa">
+            <div id="testarossa">
+                <h1 align="center">Ferrari Testarossa</h1>
+                <div class="col-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente et, itaque dignissimos ipsam. Accusamus, rerum ipsum, tenetur praesentium nobis laudantium inventore ex sit maiores facilis molestiae, quos illum consequatur rem!</p>
+                    <p id="collapse1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente et, itaque dignissimos ipsam. Accusamus, rerum ipsum, tenetur praesentium nobis laudantium inventore ex sit maiores facilis molestiae, quos illum consequatur rem!</p>
+                    <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Leer más</button>
+                </div>
+                <div class="col-6">
+                    <img src="testa.jpg">
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+    
+    <!--Código para tiempo del carousel-->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 3000
+        })
+    </script>
+</html>

@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contCarrusel{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.menu{
+	height: 4rem;
+	background-color: #000;
+	border-bottom: 2px solid #91000AFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
+	padding-left: 30px;
+}
+h1{
+	text-align: center;
+	font-weight: bold;
+}
+
+.collapsable{
+	display: flex;
+	flex-direction: column;
+}
+img{
+	max-height: 100%;
+	max-width: 100%;
+}

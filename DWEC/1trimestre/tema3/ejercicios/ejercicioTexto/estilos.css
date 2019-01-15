@@ -1,0 +1,9 @@
+div{
+	width:200px;
+	text-align: justify;
+	padding:10px;
+	border: 2px solid red;
+	float:left;
+	margin-right: 100px;
+	font-size:10px;
+}

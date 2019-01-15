@@ -1,0 +1,26 @@
+.bg-dark {
+	border-bottom: 1px solid red;
+	background-color: black!important;
+	padding: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	margin-right: 20px;
+	font-size: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.carousel-caption {
+	background-color: black;
+	opacity: 0.6;
+
+}
+
+.centrar {
+	display: flex;
+	align-items: center;
+}

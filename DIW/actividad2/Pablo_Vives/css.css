@@ -1,0 +1,26 @@
+h1{
+	text-align: center;
+}
+body{
+	background-color:lightgreen; 
+}
+div.barrafija{
+	position: sticky;
+	height: 100px;
+	width: auto;
+	top:0;
+	left: 0;
+	z-index:1;
+	background-color:hotpink;
+
+}
+div.fijos{
+
+	text-align: center;
+	margin-right: 3px;
+	padding-left: 3px;
+	display: inline-block;
+}
+img.foto{
+	margin-right: 40px;
+}

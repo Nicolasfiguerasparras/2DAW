@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover {
+		  background-color: #111;
+		}
+		.right{
+			float: right;
+		}
+
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">	
+	<link href="miCSS.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="menu">
+		<ul>
+		  <li><a class="active" href="#inicio">Inicio</a></li>
+		  <li><a href="#testarossa">Testarossa</a></li>
+		  <li><a href="#enlace3">Enlace 3</a></li>
+		  <li><a href="#enlace4">Enlace 4</a></li>
+		<div class="right">
+		  	<form class="form-inline" role="form">
+			 	<div class="form-group">
+			  		<input type="email" class="form-control" id="ejemplo_email_2" placeholder="Introduce tu correo">
+			 	</div>
+			  	<div class="form-group">
+			    	<input type="password" class="form-control" id="ejemplo_password_2" placeholder="Inserta tu contraseña">
+			  	</div>
+			  	<button type="submit" class="btn btn-primary">Ingresar</button>
+			</form>
+		</div>
+		</ul>
+	</div>
+<hr>
+		<div class="container-fluir">
+			<div class = "row">
+				<div class= "col-12">
+					<div id="miPrimerCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#miPrimerCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#miPrimerCarousel" data-slide-to="1"></li>
+							<li data-target="#miPrimerCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="d-block w-100" src="img/im1.jpg" alt="coche negro">
+								<div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.5)" >
+									<h5>Koenigsegg</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo autem hic atque numquam omnis id iste esse eius, officiis velit reprehenderit? Explicabo, optio placeat facere ratione architecto ad fugit consequuntur?</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="img/im2.jpg" alt="coche negro ciudad">
+								<div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.5)">
+									<h5>Golf</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut, voluptatum, voluptate sapiente eum maiores. Explicabo recusandae nemo minus eaque, magni, facilis id esse sint nostrum dolor alias dolores quo.</p>
+								</div>
+
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="img/im3.jpg" alt="coche amarillo">
+								<div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.5)">
+									<h5>Golf antiguo</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error deleniti provident veniam quas consequuntur facilis numquam aliquam, perspiciatis aliquid, consequatur non ullam. Provident voluptatem, nam porro possimus eos aliquid.</p>
+								</div>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#miPrimerCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#miPrimerCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('.carousel').carousel({
+			interval: 30000
+		})
+	</script>
+		<div class="container">
+			<div class = "row">
+				<div>
+				<center><h1>Ferrari Testarossa</h1></center>
+				<div class="col-6 lg">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque consequuntur harum, similique, iusto consectetur quo voluptates soluta veritatis explicabo ut odit quos accusantium, suscipit sapiente iure culpa quam quidem.ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque consequuntur harum, similique, iusto consectetur quo voluptates soluta veritatis explicabo ut odit quos accusantium, suscipit sapiente iure culpa quam quidem.</p>		
+				</div>			
+				</div>
+				<div class="col-6 lg" style="display: flex; flex-direction: column">
+					<div id="collap1" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ratione esse culpa non repellendus quos, dicta ipsum optio et atque maxime suscipit magnam eum at vero illo enim quidem itaque!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui saepe, deleniti fuga, itaque eos. Quisquam nisi sapiente quae necessitatibus accusamus placeat, est saepe eius, tempore et. Quaerat iusto, veritatis!</p>
+					</div>
+					<button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#collap1">Leer más</button>
+				</div>
+				<div class="row">
+					<img class="d-block w-100" src="img/testa.jpg" alt="coche negro ciudad">
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>

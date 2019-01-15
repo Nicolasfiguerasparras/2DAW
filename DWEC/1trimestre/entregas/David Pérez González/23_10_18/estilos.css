@@ -1,0 +1,39 @@
+table {
+	border-collapse: collapse;
+	border: white;
+}
+
+td, th {
+	padding: 0.5em;
+	font-weight: bold;
+}
+
+.text-white {
+	color: white;
+}
+
+.font-blue {
+	background-color: #9fc2f9;
+}
+
+.font-lightblue {
+	background-color: #e8f0ff;
+}
+
+.font-darkblue {
+	background-color: #3366ff;
+}
+
+caption {
+	padding: 0.3em;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.borde-grueso {
+	border: 1.2px solid black;
+}
+
+.centro {
+	margin: auto;
+}

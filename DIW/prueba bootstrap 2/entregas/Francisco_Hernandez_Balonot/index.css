@@ -1,0 +1,53 @@
+body{
+	color: #53535c;
+	font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*header*/
+.navegacion{
+	background: black;
+	border-bottom: solid 1px red;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+.menu{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0px;
+	padding: 0px;
+}
+.form{
+	margin-top:5px;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
+}
+
+
+/*main*/
+
+.row{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.text{
+	background-color: rgba(45,45,45,0.93);
+
+}
+.titulo{
+	margin-top: 50px;
+	text-align: center;
+	color: black;
+}
+
+.imgen{
+	display: flex;
+	align-items: center;
+}

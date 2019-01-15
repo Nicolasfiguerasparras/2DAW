@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicio coches</title>
+		<meta http-equiv="Content-Language" content="es"/>
+		<meta name="Keywords" content="coches, oferta, nuevos, lujo, deportivo"/>
+		<meta name="Description" content="Página de coches nuevos y en oferta"/>
+		<meta name="Distribution" content="global"/>
+		<meta name="Robots" content="all"/>
+		<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<style>
+			.contenedor {
+				width: 80%;
+				margin: auto;
+				border: 1px solid black;
+			}
+
+			.izquierda {
+				width:49%;
+				display: inline-block;
+			}
+
+			.derecha {
+				width:49%;
+				display: inline-block;
+			}
+
+			.oferta {
+				border: 1px solid red;
+				background-color: rgb(255, 255, 153);
+			}
+
+			.oferta:hover {
+				background-color: rgba(255, 255, 153, 0.1);
+				cursor: pointer;
+				opacity: 5;
+			}
+			
+			.sombra {
+				box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+			}
+
+			.sombra:hover {
+				box-shadow:0 2px 5px 0 rgba(255,0,0,0.16),0 3px 10px 0 rgba(255,0,0,0.12);
+			}
+
+			.sombraNegra {
+				box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 4px 10px 0 rgba(0,0,0,0.12);
+			}
+
+			/*.coches {
+
+			}*/	
+			.center {
+				text-align: center;
+			}
+
+			h1 {
+				font-family: 'Monoton', cursive;
+				color: rgb(255, 0, 0);
+			}
+
+			h2 {
+				text-align: center;
+				color: red;
+				font-family: 'Russo One', sans-serif;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="coches">
+			<h1 class="center" >Coches en venta</h1>
+
+			<div class="contenedor sombra">
+				<div class="izquierda">
+					<h2>Modelo</h2>
+					<img src="pagani.jpg" class="sombraNegra" width="100%" alt="Pagani">
+				</div>
+				<div class="derecha">
+					<table>
+						<tr>
+							<th>Nombre</th>
+							<td>Pagani</td>
+						</tr>
+						<tr>
+							<th>Precio</th>
+							<td>200.000</td>
+						</tr>
+						<tr>
+							<th>Año</th>
+							<td>2017</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<br><br>
+
+			<div class="contenedor oferta sombra">
+				<div class="izquierda">
+					<h2>Modelo</h2>
+					<img src="c15.jpg" class="sombraNegra" width="100%" alt="C15">
+				</div>
+				<div class="derecha">
+					<table>
+						<tr>
+							<th>Nombre</th>
+							<td>Citröen C15</td>
+						</tr>
+						<tr>
+							<th>Precio</th>
+							<td>2.000.000€</td>
+						</tr>
+						<tr>
+							<th>Año</th>
+							<td>1997</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

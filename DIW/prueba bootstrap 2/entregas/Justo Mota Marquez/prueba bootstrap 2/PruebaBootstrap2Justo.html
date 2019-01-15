@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<style type="text/css">
+		.fondo{
+			background: rgba(0, 0, 0, 0.5);
+		}
+		.marg{
+			margin-right: 0;
+			margin-left: 0;
+		}
+		.alin{
+			text-align: center;
+		}
+		.arriba{
+			margin-top: 60px;
+		}
+
+		.prop{
+			width: 80%;
+		}
+
+	</style>
+</head>
+	<!--Creacion del menu-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Testarossa <span class="sr-only">(current)</span></a>
+		      </li>
+		       <li class="nav-item active">
+		        <a class="nav-link" href="#">Enlace 3 <span class="sr-only">(current)</span></a>
+		      </li>
+		       <li class="nav-item active">
+		        <a class="nav-link" href="#">Enlace 4 <span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		    <input class="form-control mr-sm-2" type="search" placeholder="Inserta tu correo" aria-label="Search">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Inserta tu contraseña" aria-label="Search">
+		      <button class="btn btn-primary my-2 my-sm-0" type="submit">Ingresar</button>
+		    </form>
+		  </div>
+	</nav>
+    
+	<!--Carrousel-->
+	<div class="container-fluid">
+			<div class = "row">
+				<div class= "col-12">
+					<div id="miPrimerCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#miPrimerCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#miPrimerCarousel" data-slide-to="1"></li>
+							<li data-target="#miPrimerCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="d-block w-100" src="img/im1.jpg" alt="Imagen de un faro">
+								<div class="carousel-caption d-none d-md-block fondo">
+									<h5>Imagen de un faro</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="img/im2.jpg" alt="Third slide">
+								<div class="carousel-caption d-none d-md-block fondo">
+									<h5>Imagen de un faro</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="img/im3.jpg" alt="Third slide">
+								<div class="carousel-caption d-none d-md-block fondo">
+									<h5>Imagen de un faro</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								</div>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#miPrimerCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#miPrimerCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--FERRARI-->
+		<div class="container arriba">
+			<div class="row">
+				<div class="col-12 alin"><h2>Ferrari Testarossa</h2></div>
+			</div>
+			<div class="row col-12">
+				<div class="col-6">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="col-6">
+					<img src="img/testa.jpg" class="prop">
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+				</div>	
+				<div class="row">
+
+				<div class="col-6">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				</div>
+				
+				<button type="button" class="col-2 btn btn-primary">Leer mas</button>
+
+		</div>
+		</div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script>
+		$('.carousel').carousel({
+			interval: 3000
+		})
+	</script>
+</html>

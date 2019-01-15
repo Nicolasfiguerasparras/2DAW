@@ -1,0 +1,19 @@
+span.ok
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-image: url("error.png");
+	padding-left: 25px;
+	color:red;
+}
+span.error
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	background-image: url("ok.jpg");
+	
+}
+
+
+

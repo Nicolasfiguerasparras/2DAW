@@ -1,0 +1,190 @@
+.top{
+	text-align: center;
+	color: #e34f26;
+}
+
+.hd{
+	font-weight: bold;
+	text-align: center;
+	color: #f06529;
+}
+
+.menu{
+	position: sticky;
+	display: block;
+	top: 0px;
+	text-align: left;
+	background-color: black;
+	height: 60px;
+	width: 100%;
+	align-items: center;
+	z-index: 5;
+}
+
+.mIntro{
+	
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: 1%;
+	color: #e34f26;
+}
+
+.mEti{
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: 1%;
+	color: #e34f26;
+}
+
+.mHis {
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: 1%;
+	color: #e34f26;
+}
+
+.tw{
+	display: inline-block;
+	position: absolute;
+	color: #e34f26;
+	right: 15px;
+}
+
+.fb{
+	display: inline-block;
+	position: absolute;
+	color: #e34f26;
+	right: 45px;
+}
+
+.ins{
+	display: inline-block;
+	position: absolute;
+	color: #e34f26;
+	right: 75px;
+}
+
+.intro{
+	display: flex;
+	position: relative;
+	width: auto;
+	border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 8px black, 10px 10px 8px #e34f26, 15px 15px 8px #f06529;
+    margin-left: 30%;
+    margin-right: 30%;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.par1{
+	display: flex;
+	width: 59.5%;
+	padding-left: 3%;
+	vertical-align: middle;
+}
+
+.im{
+	display: inline-block;
+	width: 39.5%;
+	margin-left: 35%;
+}
+
+
+.list{
+	position: relative;
+	width: auto;
+	border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 8px black, 10px 10px 8px #e34f26, 15px 15px 8px #f06529;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 80px
+}
+
+#li{
+	display: inline-block;
+	position: relative;
+	color: #e34f26;
+	width: 24.2%;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+
+.table{
+	border-collapse: collapse;
+	display: flex;
+	position: relative;
+	width: 50%;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: left;
+    left: -4.5%;
+    margin-bottom: 80px
+}
+
+.cell{
+	border: 1px solid #ddd;
+	padding: 8px;
+
+}
+
+.the{
+	background-color: #f06529;
+}
+
+.tlon{
+	background-color: #404040;
+	color: #f06529;
+}
+
+.tshor{
+	background-color: #404040;
+	color: #f06529;
+}
+
+.foo{
+	
+	display: block;
+	bottom: 0%;
+	background-color: #e34f26;
+	height: 200px;
+	width: 100%;
+	align-items: center;
+	overflow: visible;
+	z-index: 5;
+}
+
+.foot{
+	display: flex;
+	padding-left: 3%;
+	vertical-align: middle;
+	margin-left: 25%;
+}
+
+.f1{
+	display: inline-block;
+	width: 49.5%;
+	padding-left: 3%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.f2{
+	display: inline-block;
+	width: 49.5%;
+	padding-left: 3%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.arr{
+	position: fixed;
+	font-size: 32px;
+	bottom: 3%;
+	right: 3%;
+	color: black;
+}
+

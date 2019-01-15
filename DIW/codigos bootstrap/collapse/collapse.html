@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
+		<link href="miCSS.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class = "row">
+				<div class="col-4 offset-4" style="display: flex; flex-direction: column">
+					<button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#collap1">Púlsame y hago aparecer un text</button>
+					<div id="collap1" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, odit, pariatur, asperiores, accusantium cupiditate earum quisquam rerum est deserunt ab facilis quam optio praesentium reprehenderit animi ipsa repellendus adipisci commodi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, odit, pariatur, asperiores, accusantium cupiditate earum quisquam rerum est deserunt ab facilis quam optio praesentium reprehenderit animi ipsa repellendus adipisci commodi.</p>
+
+					</div>
+					
+				</div>
+			</div>
+			<hr>
+			<div class = "row">
+				<div class="accordion col-6 offset-3">
+					<div class="card">
+						<a data-toggle="collapse" data-target="#collap2" style="cursor:pointer">
+							<h4 class="card-header">Circunferencia</h4>
+						</a>
+						<div id="collap2" class="collapse show">
+							<div class="card-body">
+								<h5 class="card-title">Definición de circunferencia</h5>
+								<p class="card-text">Una circunferencia es el lugar geométrico de los puntos de un plano que equidistan a otro punto llamado centro. </p>
+								<img src="cir.png" style="margin:auto; display:block">
+							</div>
+							<div class="card-footer text-muted">
+								Geometría - matemáticas.
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a data-toggle="collapse" data-target="#collap2" style="cursor:pointer">
+							<h4 class="card-header">Triángulo</h4>
+						</a>
+						<div id="collap2" class="collapse">
+							<div class="card-body">
+								<h5 class="card-title">Definición de triángulo</h5>
+								<p class="card-text">Polígono de tres lados </p>
+								<img src="tri.png" style="margin:auto; display:block; width:50%">
+							</div>
+							<div class="card-footer text-muted">
+								Geometría - matemáticas.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

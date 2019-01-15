@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name=”description” content="Esta es la practica realizada el dia 16 de Octubre"/>
+	<meta name="keywords" content="html, html5"/>
+	<meta name="author" content="Ignacio Ortiz Cobo"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<title>Practica 1</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+		nav{
+			position: sticky;
+			display: flex;
+			height: 50px;
+			top: 0px;
+			background-color: black;
+			border-bottom: solid 3px #F26D0CFF;
+			align-items: center;
+			color: white;
+			padding-left: 30px;
+		}
+		nav a, footer a{
+			padding-left: 5px;
+			padding-right: 5px;
+			height: 100%;
+			color: white;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+		}
+		nav a:hover, footer a:hover{
+
+			color: white;
+			text-transform: uppercase;
+			background: #F26D0CFF;
+		}
+		.divisor{
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.logo{
+			position: absolute;
+			right: 0;
+			padding-right: 10px;
+		}
+		.logo img{
+			height: 30px;
+		}
+		#gotop{
+			position: fixed;
+			bottom: 0px;
+			right: 5px;
+			color: #F26D0CFF;
+			font-size:3.2em;
+			background: transparent;
+			border: none;
+		}
+		#gotop:hover{
+			color: #F28D0CFF;
+		}
+		.introduccion{
+			display: inline-block;
+			width: 70%;
+			vertical-align: top;
+		}
+		.imagen{
+			display: inline-block;
+			width: 29%;
+		}
+		.wrapper{
+			width: 70vw;
+			box-shadow: 0 5px 10px #000;
+			margin: auto;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			padding: 40px;
+		}
+		.list{
+			display: flex;
+			justify-content: center;
+		}
+		.cont_list{
+			display: inline-block;
+			width: 24%;
+		}
+		.title{
+			text-align: center;
+			width: 100%;
+		}
+		#html{
+			width: 80%;
+		}
+		#table {
+		    border-collapse: collapse;
+		    width: 100%;
+		}
+
+		#table td, #customers th {
+		    border: 1px solid #ddd;
+		    padding: 8px;
+		}
+
+		#table tr:nth-child(even){background-color: #f2f2f2;}
+
+		#table th {
+		    padding-top: 12px;
+		    padding-bottom: 12px;
+		    text-align: center;
+		    background-color: #F26D0CFF;
+		    color: black;
+		}
+		footer{
+			background-color: black;
+			display: flex;
+			border-top: solid 3px #F26D0CFF;
+			color: white;
+			padding: 20px;
+			margin: auto;
+		}
+		footer ul{
+			margin: auto;
+		}
+		footer li{
+			display: inline-block;
+		}
+		caption{
+			margin-bottom: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		        document.getElementById("gotop").style.display = "block";
+		    } else {
+		        document.getElementById("gotop").style.display = "none";
+		    }
+		}
+
+
+		function topFunction() {
+		    document.body.scrollTop = 0; // For Safari
+		    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+	</script>
+</head>
+<body>
+	<button onclick="topFunction()" id="gotop" title="Go to top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></button>
+	<nav>
+		<a href="#introduccion">Introduccion</a><span class="divisor">|</span>
+		<a href="#etiquetas">Etiquetas</a><span class="divisor">|</span>
+		<a href="#historia">Historia</a>
+		<div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia_Logo_1.0.png"></div>
+	</nav>
+	<section id='introduccion' class="wrapper">
+		<div class="title"><h1>HTML 5</h1></div>
+		<div class="introduccion">
+			<h2>Introducción</h2>
+			<p>HTML5 (HyperText Markup Language, versión 5) es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: una «clásica», HTML (text/html), conocida como HTML5, y una variante XHTML conocida como sintaxis XHTML5 que deberá servirse con sintaxis XML (application/xhtml+xml). Esta es la primera vez que HTML y XHTML se han desarrollado en paralelo. La versión definitiva de la quinta revisión del estándar se publicó en octubre de 2014.</p>
+		</div>
+		<div class="imagen">
+			<a target="_blank" href="https://es.wikipedia.org/wiki/HTML5"><img id="html" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/375px-HTML5_logo_and_wordmark.svg.png" alt="logo_html5"></a>
+		</div>
+	</section>
+	<section id='etiquetas' class="wrapper">
+		<div class="title"><h2>Etiquetas</h2></div>
+		<ul class="list">
+			<div class="cont_list">
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_div.asp">&lt;div&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_section.asp">&lt;section&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_ul.asp">&lt;ul&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_strong.asp">&lt;strong&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_p.asp">&lt;p&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_tr.asp">&lt;tr&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_span.asp">&lt;span&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></li>
+			</div>
+			<div class="cont_list">
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_div.asp">&lt;div&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_section.asp">&lt;section&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_ul.asp">&lt;ul&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_strong.asp">&lt;strong&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_p.asp">&lt;p&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_tr.asp">&lt;tr&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_span.asp">&lt;span&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></li>
+			</div>
+			<div class="cont_list">
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_div.asp">&lt;div&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_section.asp">&lt;section&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_ul.asp">&lt;ul&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_strong.asp">&lt;strong&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_p.asp">&lt;p&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_tr.asp">&lt;tr&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_span.asp">&lt;span&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></li>
+			</div>
+			<div class="cont_list">
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_div.asp">&lt;div&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_section.asp">&lt;section&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_ul.asp">&lt;ul&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_strong.asp">&lt;strong&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_p.asp">&lt;p&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_tr.asp">&lt;tr&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_span.asp">&lt;span&gt;</a></li>
+				<li><a target="_blank" href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></li>
+			</div>
+		</ul>
+	</section>
+	<section id='historia' class="wrapper">
+		<div class="title"><h2>Historia</h2></div>
+		<table id="table">
+			<caption>Versiones de HTML</caption>
+			<tr>
+				<th>Nombre</th>
+				<th>Año</th>
+				<th>Descripción</th>
+			</tr>
+			<tr>
+				<td>HTML 2.0</td>
+				<td>1995</td>
+				<td>HTML 2.0 es el primer estándar oficial de HTML, es decir, el HTML 1.0 no existió como estándar. HTML 2.0 no soportaba tablas. Se simplificaba al máximo la estructura del documento para agilizar su edición, donde la declaración explícita de los elementos body, html y head es opcional.</td>
+			</tr>
+			<tr>
+				<td>HTML 3.2</td>
+				<td>1997</td>
+				<td>Primera recomendación de HTML publicada por el W3C (Consorcio internacional). Esta revisión incorporó los últimos avances de las páginas web desarrolladas hasta 1996, como applets de Java y texto que fluye alrededor de las imágenes.</td>
+			</tr>
+			<tr>
+				<td>HTML 4.01</td>
+				<td>1999</td>
+				<td>Desde la publicación de HTML 4.01, el W3C se centró en el desarrollo del estándar XHTML. Por este motivo, en el año 2004, las empresas Apple, Mozilla y Opera mostraron su preocupación por la falta de interés del W3C en HTML y decidieron organizarse en una nueva asociación llamada WHATWG (Web Hypertext Application Technology Working Group) que comenzó el desarrollo del HTML 5, cuyo primer borrador oficial se publicó en enero de 2008. Debido a la fuerza de las empresas que forman el grupo WHATWG y a la publicación de los borradores de HTML 5.0, en marzo de 2007 el W3C decidió retomar la actividad estandarizadora de HTML, dentro del cual decidió integrar el XHTML.</td>
+			</tr>
+			<tr>
+				<td>HTML 5, HTML 5.1, HTML 5.2</td>
+				<td>2014</td>
+				<td>HTML 5 incorpora nuevos elementos no contemplandos en HTML 4.01. Hay diversos cambios respecto a HTML 4.01. Hay nuevas etiquetas, se introduce la posibilidad de introducir audio y video de forma directa en la web sin necesidad de plugins o complementos en los navegadores, y otras novedades. El W3C irá lanzando progresivamente nuevas evoluciones del HTML 5.</td>
+			</tr>
+		</table>
+	</section>
+	<footer>
+		<ul>
+			<li><a href="#introduccion">Introduccion</a></li>
+			<li><a href="#etiquetas">Etiquetas</a></li>
+			<li><a href="#historia">Historia</a></li>
+			<li><a target="_blank" href="https://es.wikipedia.org/wiki/HTML">Wikipedia</a></li>
+			<li><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento">Mozilla</a></li>
+			<li><a target="_blank" href="https://codigofacilito.com/articulos/que-es-html">Codigo facilito</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+</html>

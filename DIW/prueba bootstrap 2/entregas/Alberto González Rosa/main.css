@@ -1,0 +1,34 @@
+.menu{
+	background-color: black;
+	border-bottom: 1px solid red;
+	height:4em;
+}
+
+#enlaces{
+	display: flex;
+	flex-direction:row;
+	color: white;
+	align-items:center;
+	align-content:stretch;
+	justify-content:space-between;
+}
+
+#formu{
+	display: flex;
+	flex-direction:row-reverse;
+	align-items:flex-end;
+	align-content:stretch;
+	justify-content:space-between;
+}
+
+.carousel{
+	width: 99%;
+}
+
+.caption{
+	background-color: #000000aa;
+}
+
+.titulo{
+	text-align: center;
+}

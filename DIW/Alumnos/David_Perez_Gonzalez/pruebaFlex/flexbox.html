@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="David Pérez">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			h1 {
+				text-align: center;
+			}
+			
+			.child {
+				background-color: silver;
+				width: 100px;
+				text-align: center;
+				line-height: 100px;
+				margin: 0.3em;
+				font-size: 2em;
+				font-weight: bold;
+			}
+
+			.flex-container {
+				display: flex;
+				background-color: peru;
+				margin: auto;
+				width: 80%;
+				margin-bottom: 1em;
+			}
+
+			.flex-row {
+				flex-direction: row;
+			}
+
+			.flex-row-reverse {
+				flex-direction: row-reverse;
+			}
+
+			.flex-column {
+				flex-direction: column;
+			}
+
+			.flex-column-reverse {
+				flex-direction: reverse-column;
+			}
+
+		</style>
+		<title>Prueba de flexbox</title>
+	</head>
+	<body>
+		<h1>David Pérez González</h1>
+		
+		<div >
+			<h2>Flex-direction</h2>
+
+			<h3>Flexbox row</h3>
+			<div class="flex-container flex-row">
+				<div class="child">1</div>
+				<div class="child">2</div>
+				<div class="child">3</div>
+			</div>
+
+			<h3>Flexbox row-reverse</h3>
+			<div class="flex-container flex-row-reverse">
+				<div class="child">1</div>
+				<div class="child">2</div>
+				<div class="child">3</div>
+			</div>
+
+			<h3>Flexbox column</h3>
+			<div class="flex-container flex-column">
+				<div class="child">1</div>
+				<div class="child">2</div>
+				<div class="child">3</div>
+			</div>
+
+			<h3>Flexbox column-reverse</h3>
+			<div class="flex-container flex-column-reverse">
+				<div class="child">1</div>
+				<div class="child">2</div>
+				<div class="child">3</div>
+			</div>
+		</div>
+	</body>
+</html>

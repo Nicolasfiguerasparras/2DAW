@@ -1,0 +1,42 @@
+.menu{
+	background-color: black;
+	border-bottom: 2px solid red;
+}
+
+.enlaces{
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+	height: 4rem;
+}
+
+.enlaces a{
+	padding: 0 1em;
+	color: white;
+}
+
+.login{
+	display: flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+
+.desc{
+	background-color: rgba(0,0,0,0.4);
+}
+
+.testa{
+	display: flex;
+	justify-content:center;
+}
+
+.tit{
+	display: flex;
+	justify-content:center;
+}
+
+.padre{
+	display: flex;
+	align-items:center;
+}
+

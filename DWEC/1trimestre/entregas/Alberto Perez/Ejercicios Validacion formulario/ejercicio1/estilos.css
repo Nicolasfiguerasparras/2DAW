@@ -1,0 +1,35 @@
+input{ margin-bottom:10px;margin-left: 5px }
+input[aria-invalid=true] + label.rojo
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-image: url("error.png");
+	padding-left: 25px;
+	color:red;
+}
+select[aria-invalid=true] + label.rojo
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-image: url("error.png");
+	padding-left: 25px;
+	color:red;
+}
+
+label.rojo
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-image: url("error.png");
+	padding-left: 25px;
+	color:red;
+}
+
+label.verde
+{
+	background-size: 18px;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	background-image: url("ok.jpg");
+	
+}

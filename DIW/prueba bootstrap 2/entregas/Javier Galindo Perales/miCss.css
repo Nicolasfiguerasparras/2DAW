@@ -1,0 +1,35 @@
+nav{
+	background-color: black;
+	height: 70px;
+	border-bottom: solid red 1px;
+	Justify-content: space-around;
+}
+
+.ima{
+	display: flex;
+	align-items: center;
+}
+
+.imagen{
+	max-height: 150px;
+}
+
+a{
+	color: white;
+}
+
+h1{
+	text-align: center;
+}
+
+.enlaces{
+	display: flex;
+	Justify-content: flex-start;
+	align-items: center;
+}
+
+.formulario{
+	display: flex;
+	Justify-content: flex-end;
+	align-items: center;
+}

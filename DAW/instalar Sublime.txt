@@ -1,0 +1,2 @@
+https://packagecontrol.io/installation#st2
+https://wbond.net/sublime_packages/sftp/installation

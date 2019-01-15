@@ -1,0 +1,171 @@
+/*
+	Nombre: Youssef Aadia
+*/
+
+/*
+	Ejercicio 1. Aplica mediante el selector universal un tamaño de fuente 
+	un 10% mayor que el original
+*/
+
+*{
+	font-size: 1.1em
+}
+
+/*
+	Ejercicio 2. Aplica a los elementos con la clase .instrucciones 
+	un borde negro de un pixel y un padding de 20px;
+*/
+.instrucciones{
+	border: 1px solid black;
+	padding: 20px;
+}
+
+/*
+	Ejercicio 3. Haz que todos los encabezados 
+	(recuerda hay 6 niveles de encabezados)
+	estén alineados al centro, en negrita y subrayados
+*/
+h1,h2,h3,h4,h5,h6{
+	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+/*
+	Ejercicio 4. Selecciona todos los elementos section
+	y aplicales un margin-top de 50px
+*/
+section{
+	margin-top: 50px;
+}
+
+/*
+	Ejercicio 5. Selecciona todos los párrafos hijos de un elemento con la clase historia
+	y ponles las letras en cursiva
+*/
+.historia>p{
+	font-style: italic;
+}
+
+/*
+	Ejercicio 6. Selecciona todos los párrafos descendientes de un elemento con la clase historia
+	y ponles el color de fondo a #EEEEEE
+*/
+.historia p{
+	background-color: #EEEEEE;
+}
+
+/*
+	Ejercicio 7. Selecciona todos los enlaces hermanos de una abreviación (abbr)
+	y ponlos de color naranja
+*/
+abbr~a{
+	color: orange;
+}
+
+/*
+	Ejercicio 8. Selecciona el hermano adyacente al elemento con id = "dis2"
+	y ponlo de color rojo
+*/
+#dis2+li{
+	color: red;
+}
+
+/*
+	Ejercicio 9. Selecciona las imagenes hijas de una sección con la clase logos 
+	y que tengan el atributo alt y ponles un borde rojo de 5px
+*/
+
+.logos img[alt]{
+	border: solid red 5px;
+}
+/*
+	Ejercicio 10. Selecciona los párrafos que estén en un contenedor cuyo lenguaje sea el inglés,
+	ponles el color de fondo verde
+*/
+div[lang="en"] p{
+	background-color: green;
+}
+/*
+	Ejercicio 11. Selecciona las fotos que contengan la cadena php en su atributo alt
+	y ponles un borde azul de 5px
+*/
+
+.logos img[alt*="php"]{
+	border: solid blue 5px;
+}
+/*
+	Ejercicio 12. Haz que cuando pases el raton por una imagen que tenga atributo alt
+	a la imagen le aparezca un borde verde de 5pixeles
+*/
+img[alt]:hover{
+	border: solid green 5px;
+}
+
+/*
+	Ejercicio 13. Selecciona al segundo hijo de una lista con un padre con la clase display
+	y ponle la letra de color amarillo
+	
+*/
+.display :nth-child(2):not(li){
+	color: yellow;
+}
+
+/*
+	Ejercicio 14. Selecciona la lista hermana de un elemento con el id=pos
+	pon los elementos pares de dicha lista de color verde
+*/
+#pos~ul{
+	color: green;
+}
+
+/*
+	Ejercicio 15. Selecciona todos los divs vacios y aplicales 30% de anchura
+	150px de alto y color de fondo gris
+*/
+div:empty{
+	width: 30%;
+	height: 150px;
+	background-color: grey;
+}
+
+/*
+	Ejercicio 16. Selecciona las filas de la tabla de los ganadores de la liga de futbol
+	que se correspondan con los años que hubo mundial (2002, 2006 y 2010)
+	y ponles el color de fondo gris
+	Para que el ejercicio puntue no se puede modificar el HTML	
+*/
+tr:nth-child(4n+3){
+	background-color: grey;
+}
+/*
+	Ejercicio 17. Selecciona las imágenes que NO tiene atributo alt 
+	y ponles un borde amarillo de 5px cuando se pasa por encima el ratón
+*/
+img:not(alt):hover{
+	border: solid yellow 5px;
+}
+/*
+	Ejercicio 18. Pon en negrita todo los td que sean los primeros hijos de un tr
+*/
+td:first-child{
+	font-weight: bold;
+}
+/*
+	Ejercicio 19. Las pantallas modernas tienen una proporcion 16:9, es decir por cada 9 cms de alto
+	tienen 16 de ancho. Crea, al final de la web, un div con el id="pantalla" cuya anchura sea 400 px y que cumpla con dicha proporción.
+	Ponle que su color de fondo sea el rosa 
+*/
+#pantalla{
+	width: 400px;
+	height: 225px;
+	background-color: pink;
+}
+
+/*
+	Ejercicio 20. ¿Qué es un elemento posicionado en CSS? Pon un ejemplo de porque, a veces, es importante posicionar elementos. 
+	Un elemento con posición absoluta, está posicionado en relación con el antepasado posicionado más cercano.
+	Es importante posicionar así a veces algunos elementos ya que si en el caso de que no queremos que se mueva de su sitio aunque la página 
+	haga scroll, es la mejor opción.
+*/

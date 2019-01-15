@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript JQuery</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript"src="additional-methods.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<form>
+	   Nombre de usuario<br>
+	   <input type="text" name="usuario" id="usuario"><span></span><br><br>
+	   Contraseña<br>
+	   <input type="password" name="contra" id="contra"><span></span><br><br>
+	   Repite contraseña<br>
+	   <input type="password" name="repite" id="repite"><span></span><br><br>
+	   Calle<br>
+	   <input type="text" name="calle" id="calle"><span></span><br><br>
+	   Puerta<br>
+	   <input type="text" name="puerta" id="puerta"><span></span><br><br>
+	   Telefono<br>
+	   <input type="text" name="telefono" id="telefono"><span></span><br><br>
+	   Matricula en el curso<br><select name="curso" id="curso">
+	              <option value="">Selecciona un curso</option>
+	              <option value="1">Diseño Web</option>
+	              <option value="2">Fotografia</option>
+	              <option value="3">Operador de video</option>
+	              <option value="4">Aplicaciones Moviles</option>
+	   </select><span></span><br><br>
+	   % a financiar del curso<input type="text" size="3" name="financiacion" id="financiacion"><span></span><br><br>
+	   Copia titulacion mas alta que posee (cualquier formato de imagen o pdf)<br>
+	   <input type="file" id="titulacion" name="titulacion"><span></span><br><br>
+	   Acepta los precios a pagar<input type="checkbox" name="condiciones" id="condiciones"><span></span><br><br>
+	   Esta de acuerdo con el reglamento del curso<input type="checkbox" name="reglamento" id="reglamento"><span></span><br><br>
+	   <input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

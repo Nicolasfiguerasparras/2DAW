@@ -1,0 +1,40 @@
+div#info
+{
+   /* border:2px solid red;*/
+    margin:auto;
+    width:60%;
+    text-align: center;
+    height: 450px;
+}
+
+img{
+  display: none;
+  width: 300px;
+}
+
+.visible{
+	display: block;
+}
+
+input{
+	margin-right: 5px;
+}
+
+
+div#interfaz{
+	height: 20%;
+	border:1px solid;
+	width:100%;
+
+}
+
+div#fotos{
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-left: 270px;
+	height: 100%;
+	border:1px solid;
+	width:100%;
+
+
+}

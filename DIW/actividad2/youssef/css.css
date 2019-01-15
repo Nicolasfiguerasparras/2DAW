@@ -1,0 +1,100 @@
+
+
+nav a{
+	text-decoration: none;
+	color: white
+}
+
+nav a .mundo{
+	position: absolute;
+	right: 1%;
+}
+
+.flecha{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	font-size: 5em;
+	text-decoration: none;
+	color: red;
+}
+nav{
+	width: 100%;
+	position: sticky;
+	top: 0;
+	padding: 1em;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+	background-color: black;
+	border-bottom: 2px solid grey;
+	box-sizing: border-box;
+}
+
+
+.cont1{
+	margin: auto;
+	width: 100%;
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,1);
+	padding-bottom: 1em;
+	margin-top: 20px;
+}
+
+section.intro{
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+
+section.intro h1{
+	text-align: center;
+}
+
+.centrado{
+	display: flex;
+	align-items:center;
+}
+
+.centrado 
+.texto{
+	display: inline-block;
+	width: 60%;
+}
+
+.centrado .imagen{
+	display: inline-block;
+	width: 39%;
+}
+
+
+#etiquetas ul{
+	display: inline-block;
+	width: 24.2%;
+	box-sizing: border-box;
+}
+
+h2.centro{
+	text-align: center;
+}
+.cont1 table{
+	width: 90%;
+	margin: 0 auto;
+}
+
+footer{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 15px;
+	padding: 1em;
+	background-color: black;
+}
+
+footer .enlaces{
+	margin: 0 auto;
+	width: 50%;
+	left: 25%;
+}
+
+footer .enlaces a{
+	text-decoration: none;
+	color: white;
+}

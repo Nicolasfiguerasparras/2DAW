@@ -1,0 +1,16 @@
+div.caja1 {
+	float: left;
+	margin-left: 5px;
+	margin-top: 2px;
+	border: 1px solid;
+	padding: 10px;
+	background-color: red;
+}
+div.caja2 {
+	float: left;
+	margin-left: 5px;
+	margin-top: 2px;
+	border: 1px solid;
+	padding: 10px;
+	background-color: green;
+}

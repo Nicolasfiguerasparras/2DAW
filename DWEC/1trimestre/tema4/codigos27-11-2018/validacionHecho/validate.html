@@ -1,0 +1,64 @@
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>jQuery validation plug-in - Demo</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script type="text/javascript" src="additional-methods.min.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+	<body>
+		<div id="main">
+			<form id="registro" method="post" action=""> 
+				<fieldset>
+					<legend>Validando un formulario completo</legend>
+					<p>
+						<label for="nombre">Nombre</label>
+						<input id="nombre" name="nombre" type="text">
+					</p>
+					<p>
+						<label for="apellidos">Apellidos</label>
+						<input id="apellidos"  name="apellidos" type="text">
+					</p>
+					<p>
+						<label for="correo">Email</label>
+						<input id="correo" name="correo" type="text">
+					</p>
+					<p>
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password">
+					</p>
+					<p>
+						<label for="re_password">Confirma password</label>
+						<input id="re_password" name="re_password" type="password">
+					</p>
+
+					<p>
+						<label for="deacuerdo">Estoy de acuerdo con la politica</label>
+						<input type="checkbox" class="checkbox" id="deacuerdo" name="deacuerdo">
+					</p>
+					<p>
+						<select name="curso" id="curso">
+							<option value="">Selecciona</option>
+							<option value="1dam">1DAM</option>
+							<option value="1daw">1DAW</option>
+							<option value="2dam">2DAM</option>
+							<option value="2daw">2DAW</option>
+						</select>
+					</p>	
+					<p> <label for="deacuerdo">Si tienes un blog</label>
+						<input type="text" id="blog" name="blog">
+					</p>
+					<p>
+						<input type="file" name="fichero">
+					</p>
+					<p>
+						<input class="submit" type="submit" value="Enviar">
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

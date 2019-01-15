@@ -1,0 +1,14 @@
+.padre{
+	background-color: #CCCCCC;
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+button{
+	margin-bottom: 10px;
+}
+
+.fullWidth{
+	width: 100%;
+}

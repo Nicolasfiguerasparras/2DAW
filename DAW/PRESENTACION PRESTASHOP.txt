@@ -1,0 +1,52 @@
+https://www.udemy.com/prestashop-tienda-ecommerce-desde-cero/
+https://bitnami.com/stack/prestashop/installer
+
+Vamos a realizar un ecommerce ficticia de una tienda de informatica, con productos, categorias y pasarelas de pago.
+
+BLOQUE 1 - ANGELA
+--------
+Introduccion
+Instalar prestashop automaticamente
+instalar prestashp manual (solo ver para tener una idea)
+Alternativas a prestashop: magento y woocomerce (wordpress)
+
+TIEMPO DISPONIBLE: 10
+
+BLOQUE 2 - ALBERTO
+--------
+administracion
+administracion de paginas
+
+TIEMPO DISPONIBLE: 13
+
+BLOQUE 3 - RUBIÑO
+--------
+categorias tienda
+
+TIEMPO DISPONIBLE: 10
+
+BLOQUE 4 - PABLO FRZ, PABLO LPZ
+--------
+productos y opciones
+productos
+productos y optimizacion
+Características de Productos
+Funcionalidades de Productos
+
+TIEMPO DISPONIBLE: 32
+
+BLOQUE 5 - CARLOS
+--------
+
+Administrar Ordenes
+Hacer pedidos, Gestionar ordenes, Crear pedidos, Boletín
+
+TIEMPO DISPONIBLE: 16
+
+BLOQUE 7 - NACHO
+--------
+Configurar Pasarelas de Pago
+
+TIEMPO DISPONIBLE: 10
+
+

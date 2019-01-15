@@ -1,0 +1,183 @@
+	arrays posicionales -> formados por conjuntos de valores ordenados respecto a un índice
+formas de crear un array 
+	$array1[x]="blablabla";
+	$array2=array("bla","bla","bla");
+	$array3=["bla","bla","bla"];
+
+	asignacion de arrays asociativos ->
+
+
+arrays multidimensioales
+	$matriz1[0][0]="bla";
+	$matriz2[0]=array("bla","bla");
+	$matriz3 = array(array("bla","bla","bla", array("bla","bla"));
+
+
+recorrer arrays posicionales -> hay que conocer previamente la dimensión de los arrays. Para ello ---> count($array);
+	--->for ($i=0;$i<count($array);$i++){echo $array[$i];}<-- imprime un array
+	
+	//count recursivo
+	$comida=array('frutas' => array('naranja', 'platano', 'manzana'), 'verduras' => array('zanahoria','cebolla','lechuga');
+	echo count($comida, COUNT_RECURSIVE); ->devuelve 8 posiciones
+	echo count($comida); ->devuelve 2 posiciones (frutas y verduras)
+	
+	otra forma de hacerlo es poniendo sizeof(array); (es exactamente lo mismo que poner count(array))
+
+
+recorrer arrays asociativos -> hace falta saber las claves para poder acceder a ellos (nombres de las posiciones)
+	funciones
+		current(array) -> devuelve el valor del elemento actual
+		next(array) -> devuelve el valor del elemento siguiente al actual (si existe)
+		prev(array) -> contrario a prev
+		end(array) -> última posición
+		key(array) -> devuelve el índice de la posición en la que estoy	
+		reset(array) -> coloca el puntero en la primera posición
+		each(array) -> devuelve cuatro posiciones de la posición del valor:
+			$persona["nombre"] = "Juan";
+			$persona["edad"] = 25;
+			each($persona) devuelve un array tal que:
+				0 = nombre
+				1 = Juan
+				key = nombre
+				value = Juan
+			DESPUÉS DE HACER ESO AVANZA UNA POSICIÓN EN EL ARRAY
+		
+
+
+ordenar array
+	sort(array) -> ordena alfabeticamente los valores, ordena de menor a mayor pero se pierde la relación entre índice y valor
+	rsort(array) -> reverse sort
+	asort(array) -> igual que sort pero manteniendo la relación entre índice y valor	
+	ksort(array) -> ordena alfanuméricamente las claves de un array de menor a mayor, manteniendo la relación entre índice y valor
+	krsort(array) -> reverse ksort
+	array_merge(array1, array2) -> combina en un solo array los valores de los dos arrays recibidos.
+		-> las posiciones numéricas las añade
+		-> si hay posiciones con nombres especificos iguales, la reemplaza por la última que se le pasa
+	array_slice(array, posición, número de elementos)
+	array_reverse(array) ->reverse
+	$array = range(limite_inf,limite_sup [,salto]) -> crea un array con las condiciones indicadas(salto es opcional)
+
+array_count_values -> cuenta número de veces que se repite *un número* en el array
+in_array(elemento_buscar,array) -> busca un elemento en un array
+
+compact() -> asigna variables a posición y valor
+
+mt_rand(inf, sup) -> num aleatorio
+
+CADENAS
+	Se puede acceder a cada uno de los caracteres de una cadena como lo hacemos con los elementos de un array
+	strlen(cadena) -> devuelve la longitud de la cadena
+	strstr(cadena, strABuscar) -> busca una cadena dentro de una cadena, devuelve la subcadena que va desde que se encuentra el 
+				      elemento hasta el final de la cadena. Si no lo encuentra, devuelve una cadena vacía. 
+				      Distingue entre mayúsculas y minúsculas.
+	strchar(cadena, charABuscar) -> idem que strstr pero buscando un único caracter.
+	strrchr(cadena, charABuscar) -> busca la última aparición de un carácter en la cadena que se le pasa.
+	stristr(cadena, strABuscar) - > idem que strstr pero no distingue entre mayúsculas y minúsculas.
+	strpos(cadena1, cadena2 [,despl]) -> busca la primera aparición de cadena2 dentro de cadena1, diferencia entre mayúsculas 
+					     y minúsuclas.
+	strrpos(cadena1, cadena2 [,desp]) -> idem que strpos pero busca la última aparición de cadena2 dentro de cadena1.
+	strspn(cadena, máscara) -> obtiene la longitud de la subcadena más larga que está formada sólo por caracteres que haya en la 
+				   máscara. Si encuentra un caracter que no está en la máscara, abandona la búsqueda. Case sensitive.
+	strcsp(cadena, máscara) -> ***No me he enterado***
+	strpbrk(cadena, lista_char) -> busca cualquier ocurrencia de la lista de char dentro de la cadena. Devuelve true/false. Case sensitive.
+	strcmp(cadena1, cadena2) -> devuelve la comparativa entre el valor en código ASCII de las dos cadenas 
+				    (<0 si cad1 es menor que cad2, >0 si cad1 es mayor que cad2 y 0 si ambas son iguales).
+	strcasecmp(cadena1, cadena2 -> idem que strcmp pero non case sensitive.
+	strncnp(cadena1, cadena2, numCharAComparar) -> idem que strcmp pero el número de caracteres indicados.
+	substr(cad, inicio [,tamaño]) -> corta la cadena desde el inicio indicado.
+	substr_replace(cad1, cad2, inicio [,tamaño] -> devuelve una cadena introduciendo cad2 en cad desde el inicio indicado (la cad1 original no sufre cambios).
+	str_replace ->
+	strtr ->
+	strim(cadena) ->
+	ltrim(cadena) ->
+	trim(cadena) ->
+	str_pad(cadena, log, char) -> rellena con caracteres la cadena pasada hasta llegar a la longitud especificada.
+	strtolower(cadena) -> convierte la cadena a minúsculas.
+	strtoupper(cadena) -> convierte la cadena a mayúsculas.
+	ucfirst(cadena) -> convierte a mayúsculas el primer carácter de la cadena.
+	ucwords(cadena) -> convierte a mayúsculas el primer carácter de cada palabra.
+	strtok(cadena, divisor) -> divide una cadena en subcadenas. Utiliza un carácter de división La primera vez que se llama a la función, devuelve el primer trozo obtenido.
+	chunk_split(cadena [,longitud][,separador] -> divide una cadena en porciones de menor tamaño.
+	explode(patron, cadena) -> alias de strtok.
+	implode(nexo, array) -> ***No me he enterado***
+	htmlspecialchars(cadena) -> convierte los catacteres con significado especial a HTML.
+	htmlentities(cadena) -> idem que htmlspecialchar pero traduce todo
+	chr(entero) -> devuelve el equivalente en ASCII al caracter asociado.
+	strrev(cadena) -> cadena invertida.
+	str_repeat(cadena, veces) -> repite una cadena tantas veces como las indicadas.
+
+EXPRESIONES REGULARES -> permite contrastar texto con un patrón de búsqueda. Compara un patrón frente a un texto y comprueba si ese texto cumple con ese patrón.
+	punto -> sustituye dentro de un patrón a cualquier carácter.
+	principio/fin de la cadena -> "^" significa inicio de la cadena y "$" el final de la cadena.
+	"+" -> el elemento antetior aparece una o más veces.
+	"*" -> el elemento aparece cero o más veces.
+	"?" -> puede que esté una sola vez o puede que no.
+	"{numero}" -> define la cantidad de veces que se repetira un elemento (número).
+		abc{4} -> coincide con "abcccc".
+		abc{1,3} -> coincide con "abc", "abcc", "abccc", pero no con "abcccc" ni con "ab".
+	"[]" -> permiten especificar el rango de caracteres, basta que exista cualquiera de ellos para que se de la condición.
+		"c[ao]sa" -> coincide con "casa" y con "cosa".
+		"[a-f]" -> coincide con todos los caracteres alfabéticos entre la "a" y la "f".
+		si dentro de corchetes aparece "^", significa una exclusión de elemento dentro de la cadena.
+	"(patron1|patron2)" -> alterna entre varias opciones (disyuntor).
+	"()" -> agrupan un subconjunto.
+	
+	preg_match(patron, cadena) -> verifica que el patrón esté en una cadena alfanumérica. Tiene que empezar y terminar por un caracter, como "`".
+	preg_match_all(patron, cadena) -> 
+	preg_match_replace(patron, cadena) -> 
+
+
+MANEJO DE FORMULARIOS
+	form
+		action
+		method
+		enctype
+		accept-charset
+		<textarea>
+			name
+			rows
+		<input>
+			name ***siempre***
+			value *opcional*
+			checked
+			type
+
+
+enctype -> encriptación
+_FILES -> array con una linea por cada elemento
+	name -> el nombre del archivo en el ordenador cliente
+	type -> el tipo de archivo
+	tmp_name -> nombre tmp del archivo en el serv
+	error -> true o false (1 o 0)
+	size -> tamaño en bytes
+move_uploaded_file($origen, $destino) -> mueve un archivo subido a una nueva ubicacion (el directorio ya tiene que existir previamente)
+file_exists($path) -> comprueba si la ruta existe (true o false)
+mkdir($path) -> crea una carpeta en la ruta especificada
+
+varios formularios juntos -> utilizar el nombre del botón enviar para identificar cada formulario
+formulario que siga relleno tras rellenarlo (tipo youtube) -> action #
+redireccionamiento por error tras acceder al formulario sin rellenarlo ->
+	header($cadena)
+
+
+
+DATE
+	01/01/1970 es la primera fecha 
+	Las fechas se almacenan en memoria con un timestamp (la cantidad de segundos desde el 01/01/1970)
+	time() -> devuelve timestamp actual
+	checkdate(mm,dd,yy) -> comprueba que la fecha sea una fecha correcta
+	date(formato, [timestamp]) -> 
+	getdate(timestamp) -> array asociativo con todas las formas de presentar la fecha
+	gettimeofday() -> array asociativo con todas las formas de presentar la hora actual
+	mktime(hora,min,seg,mes,dia,año) -> 
+	strtotime(fecha) -> devuelve timestamp correspondiente a la fecha introducida (4 nums año, 2 nums mes, 2 nums dia, separados con guiones)
+ 
+
+
+CONEXION DESDE PHP A SQL
+
+	mysqli_connect(servidor, user, pass, bd) -> conexion a la base de datos
+	mysqli_query($conector,$consulta)
+	mysqli_affected_rows($conector)
+	
+	mysqli_close(conector)
