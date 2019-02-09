@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To do list App</title>
+    <!-- Custom CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">To Do List App</a>
+    </nav>
+
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Añade una tarea</h4>
+                    </div>
+                    <form id="todo-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="titulo" placeholder="Titulo de la tarea" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Describe la tarea" id="descripcion" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="fecha" class="form-control">
+                        </div>
+                        <input type="submit" value="Grabar" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+			    <table id="lista_tareas" class="table table-hover">
+				<thead>
+                <tr>
+				  <th>Nombre</th>
+				  <th>Descripcion tarea</th>
+				  <th>Fecha limite</th>
+				  <th>Accion</th>
+				</tr>
+                <thead>
+				<tbody>
+                </tbody>
+				</table>
+			</div>
+        </div>
+    </div>
+</body>
+
+</html>

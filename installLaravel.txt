@@ -1,0 +1,24 @@
+instalar composer
+instalar dBeaver
+instalar laravel: composer global require laravel/installer
+laravel new nombre_proyecto
+cd nombre_proyecto
+php artisan serve
+
+instalar extensiones en VSCode
+	laravel-blade christian howe
+	laravel-artisan ryan
+	laravel goto view codingyu
+
+añadir en setings.json ->
+	{
+    		"emmet.includeLanguajes".{
+        		"blade":"hmtl"
+    		},
+    		"emmet.triggerExpansionOnTab":true
+	}
+
+
+crear controlador->
+desde cmd -> php artisan make:controller nombre_controlador
+
