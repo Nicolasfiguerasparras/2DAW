@@ -5,7 +5,13 @@
     
     'Comprobamos si el usuario es admin
 
-    if (user == "admin" && pass == "admin") then
-        Session("session") = Array (user,pass,openSession)
+    if user = "admin" and pass = "admin" then
+        Session("username") = user
+        if openSession="openSession" then
+            response.Cookies("openSession") = user
+        end if
+        response.redirect("index.asp")
+    else
+        response.redirect("loginError.html")
     end if
 %>

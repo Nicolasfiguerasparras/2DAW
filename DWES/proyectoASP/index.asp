@@ -1,3 +1,10 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    end if
+%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +20,13 @@
         <a href="/Vehiculos/vehiculos.html">Vehiculos</a>
         <a href="/Reservas/reservas.html">Reservas</a>
         <a href="/Factura/factura.html">Factura</a>
-        <a href="">Cerrar sesión</a>
+        <%
+            if Session("username") = "" then
+                response.write("<a href=login.html>Login</a>")
+            else
+                response.write("Cerrar sesión de "&Session("username"))
+            end if
+        %>
     </nav>
 </body>
 </html>

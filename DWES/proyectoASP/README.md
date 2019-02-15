@@ -24,13 +24,14 @@ RESERVAS:
         * Matricula del vehículo
         * Fecha de inicio
     - Ver listado con todas las reservas (si es cliente, solo verá las suyas)
+__________________________________________________________________________________________________________
 
 CONTROL DE USUARIOS:
-    -  Al acceder a la app, se muestra formulario de acceso
+    +  Al acceder a la app, se muestra formulario de acceso
         * Nick
         * Contraseña
         * OpenSession
-    - Menu
+    + Menu
         * Clientes
         * Vehículos
         * Reservas
