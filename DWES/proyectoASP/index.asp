@@ -2,6 +2,8 @@
     sessionCookie = Request.Cookies("openSession")
     if not sessionCookie = "" then
         Session("username") = sessionCookie
+    elseif Session("username") = "" then
+        response.redirect("login.html")
     end if
 %>
 
@@ -21,11 +23,7 @@
         <a href="/Reservas/reservas.html">Reservas</a>
         <a href="/Factura/factura.html">Factura</a>
         <%
-            if Session("username") = "" then
-                response.write("<a href=login.html>Login</a>")
-            else
-                response.write("Cerrar sesión de "&Session("username"))
-            end if
+            response.write("<a href=disconnect.asp>Cerrar sesión de "&Session("username")&"</a>")
         %>
     </nav>
 </body>
