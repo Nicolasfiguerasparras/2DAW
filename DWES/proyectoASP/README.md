@@ -1,12 +1,3 @@
-CLIENTES:
-    - Introducir nuevos clientes (solo admin)
-    - Listar todos los clientes (solo admin)
-    - Buscar clientes por nombre (solo admin)
-    - Ver factura  
-        * Solo se cobrarán las reservas pasadas
-        * Se deberá mostrar precio individual de cada reserva
-        * Se deberá mostrar el precio total a pagar
-
 VEHICULOS:
     - Introducir nuevos vehículos (solo admin)
     - Modificar vehículos (solo admin)
@@ -37,3 +28,12 @@ CONTROL DE USUARIOS:
         * Reservas
         * Factura
         * Cerrar sesión
+
+CLIENTES:
+    + Introducir nuevos clientes (solo admin)
+    + Listar todos los clientes (solo admin)
+    + Buscar clientes por nombre (solo admin)
+    + Ver factura  
+        * Solo se cobrarán las reservas pasadas
+        * Se deberá mostrar precio individual de cada reserva
+        * Se deberá mostrar el precio total a pagar

@@ -17,10 +17,10 @@
     
     Set Conn = Server.CreateObject("ADODB.Connection") 'Inicializamos la conexión con ADODB
     Conn.Open("proyecto") 'Conectamos con la base de datos
-    sSQL = "select * from cliente where nick="&user&" and pass="&pass 'Realizamos la consulta
+    sSQL = "select * from cliente where nick='"&user&"' and pass='"&pass&"'" 'Realizamos la consulta
     set RS = Conn.Execute(sSQL) 'Ejecutamos la consulta
 
-    if Not rs = "" then 'Comprobamos que la consulta devuelve algún dato (es decir, que ha encontrado el usuario y contraseña en la DB)
+    if Not RS("codigo") = "" then 'Comprobamos que la consulta devuelve algún dato leyendo el valor del código obtenido
         Session("username") = user
         if openSession="openSession" then
             response.Cookies("openSession") = user 'En caso de marcar el checkbox, creamos la cookie
@@ -30,10 +30,6 @@
         response.redirect("loginError.html")
     end if
 
-    ' Do While Not rs.Eof
-    '     response.write(RS("id"))
-    '     rs.MoveNext
-    ' Loop
-
-    ' Conn.Close
+    'Cerramos la conexión
+    Conn.Close
 %>
