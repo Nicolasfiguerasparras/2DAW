@@ -15,15 +15,15 @@
 
     'Comprobamos si el usuario es otro cualquiera de la base de datos
     
-    Set Conn = Server.CreateObject("ADODB.Connection")
-    Conn.Open("proyecto")
-    sSQL = "select * from cliente where nick="&user&" and pass="&pass
-    set RS = Conn.Execute(sSQL)
+    Set Conn = Server.CreateObject("ADODB.Connection") 'Inicializamos la conexión con ADODB
+    Conn.Open("proyecto") 'Conectamos con la base de datos
+    sSQL = "select * from cliente where nick="&user&" and pass="&pass 'Realizamos la consulta
+    set RS = Conn.Execute(sSQL) 'Ejecutamos la consulta
 
-    if Not rs = "" then
+    if Not rs = "" then 'Comprobamos que la consulta devuelve algún dato (es decir, que ha encontrado el usuario y contraseña en la DB)
         Session("username") = user
         if openSession="openSession" then
-            response.Cookies("openSession") = user
+            response.Cookies("openSession") = user 'En caso de marcar el checkbox, creamos la cookie
         end if
         response.redirect("index.asp")
     else
