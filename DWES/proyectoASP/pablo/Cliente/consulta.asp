@@ -1,1 +1,0 @@
-sSQL = "Insert into cliente(nombre, telefono, nick, pass) values('"&nombre&"', '"&telefono&"', '"&nick&"', '"&pass&"')"
