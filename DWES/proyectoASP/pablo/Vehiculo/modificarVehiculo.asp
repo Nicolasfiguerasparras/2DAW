@@ -63,6 +63,5 @@ response.write("<h3>Modificar vehiculo</h3>")
 		
 	END if 
 
-	response.write("<div align='center'><a href='indexVehiculo.asp'>Visualizar el contenido de la base</a></div>")
 Conn.Close
 %>

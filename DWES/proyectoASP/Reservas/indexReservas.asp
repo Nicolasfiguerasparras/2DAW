@@ -4,25 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Vehículos</title>
+        <title>Reservas</title>
     </head>
     <body>
-        <h1>Vehículos</h1>
+        <h1>Reservas</h1>
 
         <nav>
             <a href="../Clientes/clientes.asp">Clientes</a>
-            <a href="vehiculos.asp">Vehiculos</a>
-            <a href="../Reservas/indexReservas.asp">Reservas</a>
+            <a href="../Vehiculos/vehiculos.asp">Vehiculos</a>
+            <a href="indexReservas.asp">Reservas</a>
             <%
                 response.write("<a href=../disconnect.asp>Cerrar sesión de "&Session("username")&"</a>")
             %>
         </nav>
-
+    
         <br><br>
-
-        <a href="crearVehiculo.asp">Introducir vehículo</a>
-        <a href="listarVehiculo.asp">Listar vehículo</a>
-        <a href="buscarVehiculo.asp">Buscar vehículo</a>
+    
+        <a href="crearReserva.asp">Introducir reserva</a>
+        <a href="listarReservas.asp">Listar reservas</a>
+        <a href="buscarReservas.asp">Buscar reservas</a>
         <a href="../index.asp">Volver al inicio</a>
     </body>
 </html>

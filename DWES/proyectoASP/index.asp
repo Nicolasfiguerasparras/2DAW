@@ -20,7 +20,7 @@
         <nav>
             <a href="Clientes/clientes.asp">Clientes</a>
             <a href="Vehiculos/vehiculos.asp">Vehiculos</a>
-            <a href="Reservas/reservas.asp">Reservas</a>
+            <a href="Reservas/indexReservas.asp">Reservas</a>
             <%
                 response.write("<a href=disconnect.asp>Cerrar sesión de "&Session("username")&"</a>")
             %>

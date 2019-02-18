@@ -8,14 +8,8 @@
 	
 </body>
 </html>
-<!--#include file="../funciones.asp"-->
 <%
-call menuAdmin1()
 
-'response.write("<form METHOD='POST'ACTION='borrarReserva.asp'>")
-	'	response.write("<input TYPE='submit' value='Borrar' name='Borrar'>")
-'response.write("</form>")
-'
 Set Conn=Server.CreateObject("ADODB.Connection")
 Conn.open("conector")
 sSQL="SELECT cl.codigo, cl.nombre, ve.matricula, re.cliente, re.vehiculo, re.inicio, re.fin FROM cliente cl, vehiculo ve, reservas re WHERE re.cliente=cl.codigo and re.vehiculo=ve.matricula"
