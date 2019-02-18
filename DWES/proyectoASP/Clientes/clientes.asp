@@ -9,10 +9,10 @@
     if not Session("username") = "admin" and not Session("username") = "" then
         Set Conn = Server.CreateObject("ADODB.Connection")
         Conn.Open("proyecto")
-        sSQL = "select codigo from cliente where nick='"&Session("username")&"'"
+        sSQL = "select * from cliente where nick='"&Session("username")&"'"
         set RS = Conn.Execute(sSQL)
         code = RS("codigo")
-        response.redirect("verFactura.asp?cliente="&code&"'")
+        response.redirect("verFactura.asp?cliente="&code)
     end if
 %>
 
@@ -31,7 +31,6 @@
             <a href="clientes.asp">Clientes</a>
             <a href="../Vehiculos/vehiculos.asp">Vehiculos</a>
             <a href="../Reservas/reservas.asp">Reservas</a>
-            <a href="../Factura/factura.asp">Factura</a>
             <%
                 response.write("<a href=../disconnect.asp>Cerrar sesión de "&Session("username")&"</a>")
             %>

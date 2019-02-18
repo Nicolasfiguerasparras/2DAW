@@ -20,7 +20,7 @@
     sSQL = "select * from cliente where nick='"&user&"' and pass='"&pass&"'" 'Realizamos la consulta
     set RS = Conn.Execute(sSQL) 'Ejecutamos la consulta
 
-    if Not RS("codigo") = "" then 'Comprobamos que la consulta devuelve algún dato leyendo el valor del código obtenido
+    if Not rs.eof then 'Comprobamos que la consulta devuelve algún dato leyendo el valor del código obtenido
         Session("username") = user
         if openSession="openSession" then
             response.Cookies("openSession") = user 'En caso de marcar el checkbox, creamos la cookie
