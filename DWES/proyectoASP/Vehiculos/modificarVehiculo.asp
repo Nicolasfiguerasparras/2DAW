@@ -85,9 +85,8 @@
 
                 set RS=Conn.Execute(insertar)
             
-        END if 
-
-        response.write("<div align='center'><a href='indexVehiculo.asp'>Visualizar el contenido de la base</a></div>")
+        end if
+        
         Conn.Close
         %>
     </body>
