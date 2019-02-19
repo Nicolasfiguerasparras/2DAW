@@ -12,7 +12,7 @@
         sSQL = "select * from cliente where nick='"&Session("username")&"'"
         set RS = Conn.Execute(sSQL)
         code = RS("codigo")
-        response.redirect("verFactura.asp?cliente="&code)
+        response.redirect("verFactura.asp?clientCode="&code)
     end if
 %>
 

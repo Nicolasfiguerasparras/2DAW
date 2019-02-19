@@ -62,14 +62,14 @@
             telef = request.form("telef")
             nick = request.form("nick")
             pass = request.form("pass")
-            submit = request.form("submit")
 
             Set Conn = Server.CreateObject("ADODB.Connection")
             Conn.Open("proyecto")
 
-            if len(submit) > 0 then
+            if len(request.form("submit")) > 0 then
                 sSQL = "insert into cliente (nombre, telefono, nick, pass) values ('"&name&"', '"&telef&"', '"&nick&"', '"&pass&"')"
                 set RS = Conn.Execute(sSQL)
+                response.redirect("listarCliente.asp")
             end if
 
             Conn.Close

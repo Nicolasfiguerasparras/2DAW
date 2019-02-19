@@ -64,7 +64,7 @@
                         pass = RS("pass")
                         response.write("<td>"&pass&"</td>")
                         code = RS("codigo")
-                        response.write("<td><a href='verFactura.asp?cliente="&code&"'>Ver factura</a></td>")
+                        response.write("<td><a href='verFactura.asp?clientCode="&code&"'>Ver factura</a></td>")
                     response.write("</tr>")
                     rs.MoveNext
                 Loop

@@ -1,3 +1,10 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    end if
+%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,20 +27,26 @@
 
         <br><br>
 
-        <a href="crearCliente.asp">Introducir cliente</a>
-        <a href="listarCliente.asp">Listar clientes</a>
-        <a href='buscarCliente.asp'>Buscar clientes</a>
+        <%
+            if Session("username") = "admin" then
+                response.write("<a href='crearCliente.asp'>Introducir cliente</a>")
+                response.write("<a href='listarCliente.asp'>Listar clientes</a>")
+                response.write("<a href='buscarCliente.asp'>Buscar clientes</a>")
+            end if
+        %>
+        
         <a href="../index.asp">Volver al inicio</a>
+        
 
         <br><br>
 
         <%
-            cliente = request.querystring("cliente")
-            hoy=date()
-            response.write(hoy&"<br>")
+            clientCode = request.querystring("clientCode")
+            today=date()
+            response.write(today&"<br>")
             Set Conn = Server.CreateObject("ADODB.Connection")
             Conn.Open("proyecto")
-            sSQL = "SELECT cl.nombre, re.vehiculo, re.inicio, re.fin, ve.precio FROM cliente cl, vehiculo ve, reservas re WHERE cl.codigo=re.cliente and ve.matricula=re.vehiculo and cl.codigo="&cliente&""
+            sSQL = "SELECT cl.nombre, re.vehiculo, re.inicio, re.fin, ve.precio FROM cliente cl, vehiculo ve, reservas re WHERE cl.codigo=re.cliente and ve.matricula=re.vehiculo and cl.codigo="&clientCode&""
             set RS = Conn.Execute(sSQL)
 
             response.write("<table border=1>")
@@ -47,24 +60,24 @@
                 response.write("</tr>")
                 do while not RS.Eof 
                     response.write("<tr>")
-                        nombre=RS("NOMBRE")
-                        response.write("<td>"&nombre&"</td>")
+                        name=RS("nombre")
+                        response.write("<td>"&name&"</td>")
                         
-                        vehi=RS("vehiculo")
-                        response.write("<td>"&vehi&"</td>")
+                        vehicle=RS("vehiculo")
+                        response.write("<td>"&vehicle&"</td>")
 
-                        inicio=RS("inicio")
-                        response.write("<td>"&inicio&"</td>")
+                        start=RS("inicio")
+                        response.write("<td>"&start&"</td>")
 
-                        fin=RS("fin")
-                        response.write("<td>"&fin&"</td>")
+                        endNumber=RS("fin")
+                        response.write("<td>"&endNumber&"</td>")
 
-                        precioVehiculo=RS("precio")
-                        response.write("<td>"&precioVehiculo&"</td>")
+                        vehiclePrice=RS("precio")
+                        response.write("<td>"&vehiclePrice&"</td>")
 
-                        if len(fin) < hoy then
-                            precioTotal=DateDiff("D", inicio, fin)*precioVehiculo
-                            response.write("<td>"&precioTotal&"</td>")
+                        if len(endNumber) < today then
+                            totalPrice=DateDiff("D", start, endNumber)*vehiclePrice
+                            response.write("<td>"&totalPrice&"</td>")
                         end if
                     response.write("</tr>")
                     RS.MoveNext

@@ -1,3 +1,10 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    end if
+%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,9 +27,15 @@
 
         <br><br>
 
-        <a href="crearVehiculo.asp">Introducir vehículo</a>
-        <a href="listarVehiculo.asp">Listar vehículo</a>
-        <a href="buscarVehiculo.asp">Buscar vehículo</a>
+        <%
+            if Session("username") = "admin" then
+                response.write("<a href='crearVehiculo.asp'>Introducir vehículo</a> ")
+                response.write("<a href='listarVehiculo.asp'>Listar vehículo</a> ")
+                response.write("<a href='buscarVehiculo.asp'>Buscar vehículo</a>")
+            else
+                response.write("<a href='listarVehiculo.asp'>Listar vehículo</a> ")
+            end if
+        %>
         <a href="../index.asp">Volver al inicio</a>
     </body>
 </html>
