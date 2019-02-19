@@ -53,8 +53,8 @@
                         response.write("<td>"&vehiculo&"</td>")
                         fechaInicio = RS("inicio")
                         response.write("<td>"&fechaInicio&"</td>")
-                        ' fechaFinin = RS("fin")
-                        ' response.write("<td>"&fechaFin&"</td>")
+                        fechaFin = RS("fin")
+                        response.write("<td>"&fechaFin&"</td>")
 
                         response.write("<td><a href='borrarReserva.asp?cliente="&rs("cliente")&"&vehiculo="&vehiculo&"&inicio="&fechaInicio&"'>Borrar</a></td>")
                     response.write("</tr>")
