@@ -40,7 +40,7 @@
 
         <a href="crearCliente.asp">Introducir cliente</a>
         <a href="listarCliente.asp">Listar clientes</a>
-        <a href='buscarCliente.asp'>Buscar clientes</a>
+        <a href="buscarCliente.asp">Buscar clientes</a>
         <a href="../index.asp">Volver al inicio</a>
     </body>
 </html>
