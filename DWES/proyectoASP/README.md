@@ -1,6 +1,3 @@
-RESERVAS:
-    - Borrar reservas canceladas
-
 CONTROL DE USUARIOS:
     - Restringir acceso a partes de la aplicación a usuario no administrador
     - Controlar sesión abierta
@@ -23,6 +20,7 @@ RESERVAS:
         * Matricula del vehículo
         * Fecha de inicio
     + Ver listado con todas las reservas (si es cliente, solo verá las suyas)
+    + Borrar reservas canceladas
 
 CONTROL DE USUARIOS:
     +  Al acceder a la app, se muestra formulario de acceso

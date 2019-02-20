@@ -29,26 +29,27 @@
 
 
         <%
-            response.write("<h3>Inserta una reserva nueva</h3>")
-            response.write("<form action='nuevaReserva.asp' method='POST' enctype='multiport/form-data'> ")
-            response.write("<label for='cliente'>cliente</label><br>")
-                response.write("<input type='text' name='cliente' placeholder='cliente' id='cliente' required>")
-            response.write("<br/><br/>")
+            response.write("<form action='crearReserva.asp' method='POST' enctype='multiport/form-data'>")
 
-            response.write("<label for='vehiculo'>vehiculo </label><br>")
-                response.write("<input type='text' name='vehiculo' placeholder='vehiculo' id='vehiculo' required>")
-            response.write("<br/><br/>")
+                response.write("<label for='cliente'>Cliente </label>")
+                response.write("<input type='number' name='cliente' id='cliente' required>")
+                response.write("<br><br>")
 
-            response.write("<label for='inicio'>inicio</label><br>")
-                response.write("<input type='date' name='inicio' id='inicio' placeholder='inicio' required>")
-            response.write("<br/><br/>")
+                response.write("<label for='vehiculo'>Vehiculo </label>")
+                response.write("<input type='text' name='vehiculo' id='vehiculo' required>")
+                response.write("<br><br>")
 
-            response.write("<label for='fin'>Fin</label><br>")
-                response.write("<input type='date' name='fin' placeholder='fin' id='fin' required>")
-            response.write("<br/><br/>")
+                response.write("<label for='inicio'>Fecha de inicio </label>")
+                response.write("<input type='date' name='inicio' id='inicio' required>")
+                response.write("<br><br>")
 
-            response.write("<input type='submit' name='Insertar' value='Insertar'>")
+                response.write("<label for='fin'>Fecha de fin </label>")
+                response.write("<input type='date' name='fin' id='fin' required>")
+                response.write("<br><br>")
+
+                response.write("<input type='submit' name='Insertar' value='Insertar'>")
                 response.write("<input type='reset' name='Borrar' value='Borrar'>")
+
             response.write("</form><br>")
 
 
@@ -56,15 +57,15 @@
             vehiculo = request.form("vehiculo")
             inicio = request.form("inicio")
             fin = request.form("fin")
-            insertar = request.form("Insertar")
 
             Set Conn = Server.CreateObject("ADODB.Connection")
             Conn.Open("proyecto")
 
-            IF(len(insertar)>0)then
-            sSQL = "Insert into reservas (cliente, vehiculo, inicio, fin) values ('"&cliente&"', '"&vehiculo&"', '"&inicio&"', '"&fin&"')"
-            set RS = Conn.Execute(sSQL)
-            END if
+            if len(request.form("Insertar")) > 0 then
+                insertQuery = "Insert into reservas (cliente, vehiculo, inicio, fin) values ("&cliente&", '"&vehiculo&"', '"&inicio&"', '"&fin&"')"
+                set RS = Conn.Execute(insertQuery)
+                response.redirect("listarReservas.asp")
+            end if
 
             Conn.Close
         %>
