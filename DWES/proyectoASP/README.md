@@ -1,9 +1,3 @@
-CONTROL DE USUARIOS:
-    - Restringir acceso a partes de la aplicación a usuario no administrador
-    - Controlar sesión abierta
-    - Controlar tiempo de caducidad de la sesión
-_____________________________________________________________________________________________________
-
 VEHICULOS:
     + Introducir nuevos vehículos (solo admin)
     + Modificar vehículos (solo admin)

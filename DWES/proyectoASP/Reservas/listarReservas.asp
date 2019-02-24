@@ -1,5 +1,22 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    elseif Session("username") = "" then
+        response.redirect("../login.html")
+    end if
+
+    if not Session("username") = "admin" and not Session("username") = "" then
+        Set Conn = Server.CreateObject("ADODB.Connection")
+        Conn.Open("proyecto")
+        sSQL = "select * from cliente where nick='"&Session("username")&"'"
+        set RS = Conn.Execute(sSQL)
+        code = RS("codigo")
+    end if
+%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +36,12 @@
         </nav>
 
         <br><br>
-
-        <a href="crearReserva.asp">Introducir reserva</a>
+        
+        <%
+            if Session("username") = "admin" then
+                response.write("<a href='crearReserva.asp'>Introducir reserva</a> ")
+            end if
+        %>
         <a href="listarReservas.asp">Listar reservas</a>
         <a href="buscarReservas.asp">Buscar reservas</a>
         <a href="../index.asp">Volver al inicio</a>
@@ -32,11 +53,16 @@
             Set Conn = Server.CreateObject("ADODB.Connection")
             Conn.Open("proyecto")
             
-            sSQL="SELECT cl.codigo, cl.nombre, ve.matricula, re.cliente, re.vehiculo, re.inicio, re.fin FROM cliente cl, vehiculo ve, reservas re WHERE re.cliente=cl.codigo and re.vehiculo=ve.matricula"
+            adminQuery = "SELECT cl.codigo, cl.nombre, ve.matricula, re.cliente, re.vehiculo, re.inicio, re.fin FROM cliente cl, vehiculo ve, reservas re WHERE re.cliente=cl.codigo and re.vehiculo=ve.matricula"
+            clientQuery = "SELECT cl.codigo, cl.nombre, ve.matricula, re.cliente, re.vehiculo, re.inicio, re.fin FROM cliente cl, vehiculo ve, reservas re WHERE cl.codigo="&code&" and re.cliente=cl.codigo and re.vehiculo=ve.matricula"
 
             borrar = request.form("Borrar")
 
-            set RS = Conn.Execute(sSQL)
+            if Session("username") = "admin" then
+                set RS = Conn.Execute(adminQuery)
+            else
+                set RS = Conn.Execute(clientQuery)
+            end if
 
                 response.write("<table border=1>")
                     response.write("<tr>")
@@ -56,7 +82,9 @@
                         fechaFin = RS("fin")
                         response.write("<td>"&fechaFin&"</td>")
 
-                        response.write("<td><a href='borrarReserva.asp?cliente="&rs("cliente")&"&vehiculo="&vehiculo&"&inicio="&fechaInicio&"'>Borrar</a></td>")
+                        if Session("username") = "admin" then
+                            response.write("<td><a href='borrarReserva.asp?cliente="&rs("cliente")&"&vehiculo="&vehiculo&"&inicio="&fechaInicio&"'>Borrar</a></td>")
+                        end if
                     response.write("</tr>")
                 rs.MoveNext
             Loop

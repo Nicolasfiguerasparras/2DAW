@@ -43,7 +43,6 @@
         <%
             clientCode = request.querystring("clientCode")
             today=date()
-            response.write(today&"<br>")
             Set Conn = Server.CreateObject("ADODB.Connection")
             Conn.Open("proyecto")
             sSQL = "SELECT cl.nombre, re.vehiculo, re.inicio, re.fin, ve.precio FROM cliente cl, vehiculo ve, reservas re WHERE cl.codigo=re.cliente and ve.matricula=re.vehiculo and cl.codigo="&clientCode&""

@@ -1,3 +1,12 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    elseif Session("username") = "" then
+        response.redirect("../login.html")
+    end if
+%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -19,8 +28,12 @@
         </nav>
     
         <br><br>
-    
-        <a href="crearReserva.asp">Introducir reserva</a>
+
+        <%
+            if Session("username") = "admin" then
+                response.write("<a href='crearReserva.asp'>Introducir reserva</a> ")
+            end if
+        %>
         <a href="listarReservas.asp">Listar reservas</a>
         <a href="buscarReservas.asp">Buscar reservas</a>
         <a href="../index.asp">Volver al inicio</a>
