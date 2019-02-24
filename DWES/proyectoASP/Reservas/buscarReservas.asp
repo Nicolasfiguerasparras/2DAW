@@ -1,3 +1,20 @@
+<%
+    sessionCookie = Request.Cookies("openSession")
+    if not sessionCookie = "" then
+        Session("username") = sessionCookie
+    elseif Session("username") = "" then
+        response.redirect("../login.html")
+    end if
+
+    if not Session("username") = "admin" and not Session("username") = "" then
+        Set Conn = Server.CreateObject("ADODB.Connection")
+        Conn.Open("proyecto")
+        sSQL = "select * from cliente where nick='"&Session("username")&"'"
+        set RS = Conn.Execute(sSQL)
+        code = RS("codigo")
+    end if
+%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,7 +37,11 @@
 
         <br><br>
 
-        <a href="crearReserva.asp">Introducir reserva</a>
+        <%
+            if Session("username") = "admin" then
+                response.write("<a href='crearReserva.asp'>Introducir reserva</a> ")
+            end if
+        %>
         <a href="listarReservas.asp">Listar reservas</a>
         <a href="buscarReservas.asp">Buscar reservas</a>
         <a href="../index.asp">Volver al inicio</a>
@@ -42,7 +63,11 @@
 
             if len(buscar) > 0 then
                 
-                searchQuery="SELECT distinct cl.nombre, re.* FROM cliente cl, vehiculo ve , reservas re where cl.codigo=re.cliente and ve.matricula=re.vehiculo and (cl.nombre like '%"&buscar&"%' or ve.matricula like '%"&buscar&"%' or re.inicio like '%"&buscar&"%' or re.fin like '%"&buscar&"%')"
+                if Session("admin") = "admin" then
+                    searchQuery = "SELECT distinct cl.nombre, re.* FROM cliente cl, vehiculo ve , reservas re WHERE cl.codigo=re.cliente and ve.matricula=re.vehiculo and (cl.nombre like '%"&buscar&"%' or ve.matricula like '%"&buscar&"%' or re.inicio like '%"&buscar&"%' or re.fin like '%"&buscar&"%')"
+                else
+                    searchQuery = "SELECT distinct cl.nombre, re.* FROM cliente cl, vehiculo ve , reservas re WHERE cl.codigo="&code&" and cl.codigo=re.cliente and ve.matricula=re.vehiculo and (cl.nombre like '%"&buscar&"%' or ve.matricula like '%"&buscar&"%' or re.inicio like '%"&buscar&"%' or re.fin like '%"&buscar&"%')"
+                end if
                 set RS = Conn.Execute(searchQuery)
                     response.write("<table border=1>")
                         response.write("<tr>")
